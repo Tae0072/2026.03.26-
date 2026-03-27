@@ -1,29 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM 요소 동적 추가/삭제</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <h1>DOM 요소 동적 추가/삭제</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM 요소 동적 추가/삭제</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>DOM 요소 동적 추가/삭제</h1>
 
-      <!-- 문항 1: 입력창 + 추가 버튼 -->
-      <div class="input-area">
-        <input
-          type="text"
-          id="itemInput"
-          placeholder="추가할 항목을 입력하세요"
-        />
-        <button id="addBtn">추가</button>
-      </div>
+  <div class="input-area">
+    <input type="text" id="itemInput" placeholder="내용을 입력하세요">
+    <button id="addBtn">추가</button>
+  </div>
 
-      <!-- 문항 1: 컨테이너 div -->
-      <div id="container"></div>
-    </div>
+  <div id="container"></div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
