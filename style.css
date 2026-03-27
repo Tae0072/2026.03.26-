@@ -1,0 +1,115 @@
+/* 기본 레이아웃 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 560px;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* 문항 1: 입력창 + 추가 버튼 */
+.input-area {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-area input:focus {
+  border-color: #4a90e2;
+}
+
+.input-area button {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.input-area button:hover {
+  background-color: #357abd;
+}
+
+/* 문항 3: 컨테이너 스타일 */
+#container {
+  border: 2px dashed #b0c4de;
+  border-radius: 12px;
+  padding: 16px;
+  min-height: 160px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#container:empty::before {
+  content: '항목을 추가하면 여기에 표시됩니다.';
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* 문항 3: 아이템 박스 스타일 */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaf2ff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #333;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 문항 2, 3: 삭제(X) 버튼 스타일 */
+.item .delete-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  border-radius: 4px;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.item .delete-btn:hover {
+  color: #e74c3c;
+  background-color: #fde8e8;
+}
